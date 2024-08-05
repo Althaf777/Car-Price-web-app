@@ -9,8 +9,10 @@ scale_model=pickle.load(open('scaler.pkl','rb'))
 st.title("Car Price Prediction")
 
 df=pd.read_csv(r"C:\Users\AL\Downloads\udemy ML\Car projects\datasets\car data.csv")
-df['Total_years']=2024-df['Year']
-df2=df.drop('Year',axis=1)
+df1=df.drop('Car_Name',axis=1)
+df1['Total_years']=2024-df1['Year']
+df2=df1.drop('Year',axis=1)
+
 
 st.subheader("Input Features")
 
